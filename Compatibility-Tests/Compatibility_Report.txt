@@ -13,5 +13,8 @@ Compatibility tests ensure that the Product Catalogue service behaves consistent
 - **Mobile UI Rendering**: PASSED
 - **Cross-client API consistency**: PASSED
 - **SQLite/PostgreSQL Mapping Check**: PASSED
+- **Multi-Header Compatibility (UA/Locales)**: PASSED
+- **Numeric Precision (Decimal -> JSON)**: PASSED
 
+**Test Count**: 7 Tests (All Passed)
 **Status**: 100% Compatible across targeted environments.

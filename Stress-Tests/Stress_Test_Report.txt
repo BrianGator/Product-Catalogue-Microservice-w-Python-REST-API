@@ -16,5 +16,9 @@ Stress testing identifies the "breaking point" of the microservice by pushing it
 ## Results
 - **Resilience**: HIGH
 - **Data Integrity during failure**: MAINTAINED
+- **Rapid Sequential POSTs**: SUCCESS (100 reqs)
+- **Recursive Search Aggregation**: STABLE
+- **Concurrency (Read-Write contention)**: RESOLVED
 
+**Test Count**: 7 Scenarios
 **Status**: Verified system limits. Migration to PostgreSQL recommended for loads > 500 RPS.

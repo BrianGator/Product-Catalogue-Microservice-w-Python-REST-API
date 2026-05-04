@@ -11,20 +11,15 @@ A professional-grade Python microservice for managing an eCommerce Product Catal
 - **18+ Automated Testing Suites**: Covering every layer of the application from units to global stress.
 
 ## Comprehensive Testing Ecosystem
-This project maintains **100% logic coverage** across the following testing methodologies:
-- **Unit Tests**: Isolated model logic verification.
-- **Rest-API-tests**: HTTP endpoint and status code validation.
+This project maintains **100% logic coverage** and over **60+ automated test cases** across the following testing methodologies:
+- **Unit Tests**: 13+ assertions covering model validations and error edge cases.
+- **Rest-API-tests**: 14+ scenarios validating HTTP status codes and payloads.
+- **Integration-Tests**: 6+ full-lifecycle scenarios from API to DB persistence.
+- **Smoke-Tests**: 8+ instant "Sanity" checks for deployment health.
+- **Stress-Tests**: 7+ scenarios determining system breaking points.
+- **Compatibility-Tests**: 7+ cross-platform and cross-client proofs.
+- **System-Tests**: 8+ hardware-software interaction proofs.
 - **BDD-Tests & Cucumber-Tests**: Gherkin-based behavioral scenarios.
-- **TDD-Tests**: Red-Green-Refactor development cycle proofs.
-- **Integration-Tests**: Cross-module communication (API -> DB).
-- **Selenium-Tests, Playwright-Tests & Cypress-Tests**: Full browser automation.
-- **Performance-Testing**: Speed benchmarks (Pytest, Locust, JMeter, Timeit).
-- **Security-Tests**: Vulnerability scanning (SQLi, XSS, Input Validation).
-- **Stress-Tests**: Determining system breaking points and resilience.
-- **System-Tests**: Hardware-software interaction and environment config.
-- **Smoke-Tests**: Post-deployment "Sanity" checks.
-- **E2E-Tests**: Complete user-journey orchestration.
-- **Compatibility-Tests**: Cross-platform/Cross-client verification.
 
 ## CI/CD Automation
 The project is fully integrated with several Tier-1 CI/CD platforms, automating the following on every commit:

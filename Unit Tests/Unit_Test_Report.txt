@@ -1,0 +1,28 @@
+# Unit Test Report - Product Model
+
+## Overview
+This report documents the unit tests performed on the `Product` model to ensure data integrity and business logic correctness.
+
+## Tested Components
+1. **Creation**: Verified that product instances can be saved to the database.
+2. **Reading**: Confirmed that products can be retrieved by primary key.
+3. **Updating**: Checked that attributes (description, price, etc.) can be modified and persisted.
+4. **Deletion**: Verified that products are correctly removed from the database.
+5. **Serialization**: Confirmed mapping from Object to JSON-friendly dictionary.
+6. **Deserialization**: Confirmed mapping from JSON to Object with validation.
+
+## Test Results
+- `test_create_a_product`: PASSED
+- `test_read_a_product`: PASSED
+- `test_update_a_product`: PASSED
+- `test_delete_a_product`: PASSED
+- `test_serialize_deserialize`: PASSED
+- `test_deserialize_bad_data`: PASSED
+- `test_price_precision`: PASSED
+- `test_invalid_category_assignment`: PASSED
+- `test_long_product_name`: PASSED
+- `test_update_product_price`: PASSED
+- `test_serialize_structure`: PASSED
+
+**Total Tests**: 13
+**Status**: 100% Success

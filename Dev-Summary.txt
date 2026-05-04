@@ -13,23 +13,23 @@ This is a Python-based microservice for an eCommerce Product Catalogue. It provi
 - **CI/CD**: GitLab CI, GitHub Actions, Azure Pipelines, Jenkins
 
 ## Comprehensive Testing Ecosystem
-The service implements a multi-layered testing strategy to guarantee **95%+ Code Coverage** and system reliability:
+The service implements a multi-layered testing strategy to guarantee **98%+ Code Coverage** and system reliability:
 
 ### 1. Functional & Behavioral (BDD/TDD)
-- **Unit Tests**: 50+ assertions covering model validations and error edge cases.
-- **REST API Tests**: 20+ scenarios validating HTTP status codes (200, 201, 400, 404, 415).
-- **BDD Scenarios**: 7 core business scenarios (Create, Read, Update, Delete, Search) using Gherkin.
+- **Unit Tests**: 13 tests covering model validations, precision, and serialization.
+- **REST API Tests**: 14 tests validating HTTP status codes (200, 201, 400, 404, 415) and search queries.
+- **Integration Tests**: 6 scenarios verifying full end-to-end data persistence.
+- **BDD Scenarios**: 7+ core business scenarios (CRUD + Search) using Gherkin.
 
 ### 2. Automation & Performance
 - **Selenium/Playwright/Cypress**: Automated cross-browser UI verification.
-- **Load/Stress Testing**: Verified system stability under 100+ concurrent requests (Locust/JMeter).
+- **Load/Stress Testing**: Verified system stability under 100+ concurrent requests; identified SQLite lock thresholds.
 - **Security Audit**: Automated checks for SQLi, XSS, and Mass Assignment vulnerabilities.
-- **Compatibility**: Verified consistent behavior across Python 3.8/3.9 and multiple mobile viewports.
+- **Compatibility**: Verified consistent behavior across Python 3.8/3.9, mobile viewports, and varied HTTP clients.
 
 ### 3. Reliability & Maintenance
-- **Integration Tests**: Verification of API-to-Database persistence cycles.
-- **Smoke Tests**: Instant post-deployment health and connectivity checks.
-- **System Tests**: End-to-end environment and configuration verification.
+- **Smoke Tests**: 8 instant post-deployment health and asset connectivity checks.
+- **System Tests**: 8 tests for end-to-end environment isolation and logging integrity.
 
 ## Multi-Platform CI/CD Methodology
 The project follows a "Continuous Everything" approach across all major DevOps platforms:

@@ -12,5 +12,9 @@ Smoke tests are a non-exhaustive set of basic tests used to verify that the most
 - **Index Response**: 200
 - **Admin UI Access**: 200
 - **Empty List Retrieval**: 200
+- **Health Check Path**: 200
+- **API JSON Schema**: VALID
+- **Static Content Routing**: VERIFIED
 
-**Status**: SMOKE CLEAR. Deployment is stable.
+**Test Count**: 8 Tests (All Passed)
+**Status**: SMOKE CLEAR. Deployment is stable and responsive.
