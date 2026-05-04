@@ -44,10 +44,10 @@ Automation includes:
 - `/Unit Tests/`: Model-level TDD unit tests.
 - `/Rest-API-tests/`: API-level integration tests.
 - `/BDD-Tests/`: Feature files and behavioral steps.
-- `/GitLab-CI-CD/`: GitLab-specific pipeline definitions.
-- `/GitHub-CI-CD/`: GitHub Actions workflow definitions.
-- `/Azure-DevOps-CI-CD/`: Azure Pipeline YAML configurations.
-- `/Jenkins-CI-CD/`: Jenkinsfile and automation scripts.
+- `/CI-CD-GitLab/`: GitLab-specific pipeline definitions.
+- `/CI-CD-GitHub/`: GitHub Actions workflow definitions.
+- `/CI-CD-Azure-DevOps/`: Azure Pipeline YAML configurations.
+- `/CI-CD-Jenkins/`: Jenkinsfile and automation scripts.
 - `/Performance-Testing/`: Sub-folders for Locust, JMeter, and Benchmarking.
 - `/Security-Tests/`: Audit reports and vulnerability scripts.
 
