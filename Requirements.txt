@@ -1,0 +1,37 @@
+###############################################################################
+# ORIGINAL PROJECT PROMPT & REQUIREMENTS
+###############################################################################
+
+Microservice for the Product Catalogue backend to an eCommerce Application in Python.
+
+Attributes used:
+- id: id of the product
+- name: name of the product
+- description: description of the product
+- price: price of the product
+- available: if the product is available
+- category: category under which the product belongs
+
+Technical Goals:
+1. REST API with Test Driven Development (TDD)
+2. Behavior Driven Development (BDD) with Selenium and Behave
+3. Maintain at least 95% code coverage
+4. Zero linting errors
+
+Acceptance Criteria:
+- CRUD functions implemented
+- Search for products by Category, Availability, and Name
+- 7 passings scenarios: Create, Read, Update, Delete, List by Category, List by Available, List by Name
+
+###############################################################################
+# PYTHON DEPENDENCIES
+###############################################################################
+
+Flask==2.0.3
+Flask-SQLAlchemy==2.5.1
+SQLAlchemy==1.4.31
+factory-boy==3.2.1
+behave==1.2.6
+selenium==4.1.0
+requests==2.27.1
+python-dotenv==0.19.2

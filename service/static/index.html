@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Store Admin Interface</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        body { padding-top: 50px; }
+        .flash { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Store Admin</h1>
+
+        <!-- FLASH MESSAGE -->
+        <div id="flash_message" class="flash"></div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <!-- FORM -->
+                <div class="mb-3">
+                    <label for="product_id" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="product_id">
+                </div>
+                <div class="mb-3">
+                    <label for="product_name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="product_name">
+                </div>
+                <div class="mb-3">
+                    <label for="product_description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="product_description">
+                </div>
+                <div class="mb-3">
+                    <label for="product_price" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="product_price">
+                </div>
+                <div class="mb-3">
+                    <label for="product_available" class="form-label">Available</label>
+                    <select class="form-select" id="product_available">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="product_category" class="form-label">Category</label>
+                    <select class="form-select" id="product_category">
+                        <option value="UNKNOWN">Unknown</option>
+                        <option value="CLOTHS">Cloths</option>
+                        <option value="FOOD">Food</option>
+                        <option value="HOUSEWARES">Housewares</option>
+                        <option value="AUTOMOTIVE">Automotive</option>
+                        <option value="TOOLS">Tools</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="btn btn-primary" id="create-btn">Create</button>
+                <button type="button" class="btn btn-warning" id="update-btn">Update</button>
+                <button type="button" class="btn btn-info" id="retrieve-btn">Retrieve</button>
+                <button type="button" class="btn btn-danger" id="delete-btn">Delete</button>
+                <button type="button" class="btn btn-secondary" id="clear-btn">Clear</button>
+                <button type="button" class="btn btn-success" id="search-btn">Search</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Search Results</h2>
+                <table class="table table-striped" id="search_results">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Available</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/static/js/rest_api.js"></script>
+</body>
+</html>
