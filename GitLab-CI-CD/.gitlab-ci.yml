@@ -1,0 +1,43 @@
+image: python:3.8
+
+stages:
+  - lint
+  - test
+  - integration
+  - bdd
+  - deploy
+
+variables:
+  DATABASE_URI: "sqlite:///test.db"
+
+before_script:
+  - pip install -r Requirements.txt
+
+lint_job:
+  stage: lint
+  script:
+    - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+unit_tests:
+  stage: test
+  script:
+    - python3 -m unittest discover 'Unit Tests'
+
+integration_tests:
+  stage: integration
+  script:
+    - python3 -m unittest discover 'Integration-Tests'
+
+bdd_scenarios:
+  stage: bdd
+  services:
+    - selenium/standalone-chrome:latest
+  script:
+    - behave
+
+deploy_to_prod:
+  stage: deploy
+  script:
+    - echo "Deploying to production server..."
+  only:
+    - main

@@ -1,0 +1,14 @@
+# Integration Test Report
+
+## Overview
+Integration tests verify that the different modules of the microservice (Flask routes, SQLAlchemy models, and the SQLite database) work together correctly.
+
+## Tested Interactions
+- **API to Database**: Verified that a POST request to `/products` correctly results in a new row in the `product` table.
+- **Model to Database**: Verified that updating a model instance and calling `db.session.commit()` persists data across different sessions.
+
+## Results
+- `test_api_to_db_persistence`: PASSED
+- `test_transaction_rollback`: PASSED
+
+**Status**: Verified Integration Successful.

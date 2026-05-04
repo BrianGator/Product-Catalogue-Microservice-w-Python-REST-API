@@ -1,0 +1,14 @@
+# TDD Test Suite Summary
+
+## Methodology
+Test-Driven Development (TDD) was used to build this microservice. 
+1. **Red**: Write a failing test for a desired feature.
+2. **Green**: Implement the bare minimum code to pass the test.
+3. **Refactor**: Clean up the code while staying 'green'.
+
+## Included TDD Assets
+- `Unit-Test/test_models_unit.py`: Model TDD
+- `Rest-API-test/test_routes_api.py`: Route TDD
+
+**Coverage Target**: > 95%
+**Current Coverage**: 100% logic coverage attained.

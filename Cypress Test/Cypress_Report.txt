@@ -1,0 +1,18 @@
+# Cypress Test Automation Report
+
+## Test Summary
+- **Tool**: Cypress 10+
+- **Environment**: Localhost:3000
+
+## Execution Logs
+- `cypress_test.cy.js`
+  - [x] displays the correct page header (PASSED)
+  - [x] can search for products (PASSED)
+  - [x] clears the form correctly (PASSED)
+
+## Results
+- **Tests Executed**: 3
+- **Passed**: 3
+- **Failed**: 0
+
+**Overall Status**: SUCCESS

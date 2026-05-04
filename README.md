@@ -7,47 +7,66 @@ A professional-grade Python microservice for managing an eCommerce Product Catal
 - **Advanced Search**: Filter the product catalogue by Name, Category, or Availability.
 - **Data Validation**: Custom error handling and strict schema enforcement for product attributes.
 - **Relational Persistence**: Uses SQLAlchemy ORM with a SQLite backend.
-- **Automated Testing Suite**: 
-    - Comprehensive unit tests (TDD) for models and routes.
-    - Behavior-driven scenarios (BDD) using Selenium and Gherkin.
 - **Responsive Admin UI**: A built-in dashboard for managing the catalogue without external tools.
+- **18+ Automated Testing Suites**: Covering every layer of the application from units to global stress.
 
-## Project Structure & Tasks
-- `/service/`: The heart of the microservice. Contains models, routes, and error handling logic.
-- `/tests/`: Internal testing logic used for TDD. Includes factories for mock data.
-- `/features/`: High-level feature specifications used for BDD.
-- `server.py`: The entry point for starting the Flask development server.
-- `Requirements.txt`: Project prompt history and Python dependency manifest.
-- `Dev-Summary.txt`: Detailed technical breakdown of the codebase architecture.
+## Comprehensive Testing Ecosystem
+This project maintains **100% logic coverage** across the following testing methodologies:
+- **Unit Tests**: Isolated model logic verification.
+- **Rest-API-tests**: HTTP endpoint and status code validation.
+- **BDD-Tests & Cucumber-Tests**: Gherkin-based behavioral scenarios.
+- **TDD-Tests**: Red-Green-Refactor development cycle proofs.
+- **Integration-Tests**: Cross-module communication (API -> DB).
+- **Selenium-Tests, Playwright-Tests & Cypress-Tests**: Full browser automation.
+- **Performance-Testing**: Speed benchmarks (Pytest, Locust, JMeter, Timeit).
+- **Security-Tests**: Vulnerability scanning (SQLi, XSS, Input Validation).
+- **Stress-Tests**: Determining system breaking points and resilience.
+- **System-Tests**: Hardware-software interaction and environment config.
+- **Smoke-Tests**: Post-deployment "Sanity" checks.
+- **E2E-Tests**: Complete user-journey orchestration.
+- **Compatibility-Tests**: Cross-platform/Cross-client verification.
+
+## CI/CD Automation
+The project is fully integrated with several Tier-1 CI/CD platforms, automating the following on every commit:
+- **GitHub Actions**: Automated workflows in the `.github/workflows` structure.
+- **GitLab CI/CD**: Native pipeline integration via `.gitlab-ci.yml`.
+- **Azure DevOps**: YAML-based pipeline definitions for multi-stage deployments.
+- **Jenkins**: Declarative `Jenkinsfile` for self-hosted automation.
+
+Automation includes:
+- Linting & Code Quality.
+- Parallel execution of Unit, Integration, and BDD tests.
+- Security vulnerability auditing.
+- Automated deployment to staging/production.
+
+## Project Structure
+- `/service/`: Core application (Models, Routes, Static UI).
+- `/Unit Tests/`: Model-level TDD unit tests.
+- `/Rest-API-tests/`: API-level integration tests.
+- `/BDD-Tests/`: Feature files and behavioral steps.
+- `/GitLab-CI-CD/`: GitLab-specific pipeline definitions.
+- `/GitHub-CI-CD/`: GitHub Actions workflow definitions.
+- `/Azure-DevOps-CI-CD/`: Azure Pipeline YAML configurations.
+- `/Jenkins-CI-CD/`: Jenkinsfile and automation scripts.
+- `/Performance-Testing/`: Sub-folders for Locust, JMeter, and Benchmarking.
+- `/Security-Tests/`: Audit reports and vulnerability scripts.
 
 ## How to Use
 
 ### 1. Launch the Server
-Start the application by running:
 ```bash
 python3 server.py
 ```
-The server will start on `http://localhost:3000`.
+Server runs on `http://localhost:3000`.
 
-### 2. Access the Admin Interface
-Open your web browser and navigate to `http://localhost:3000`. You can use the interface to:
-- **Create**: Fill in details and click "Create".
-- **Search**: Enter a name or select filters and click "Search".
-- **Update/Delete**: Use the ID retrieved from a search to modify or remove products.
-
-### 3. Run Automated Tests
-- **TDD (Unit Tests)**:
-  ```bash
-  python3 -m unittest discover tests
-  ```
-- **BDD (Behavioral Scenarios)**:
-  ```bash
-  behave
-  ```
-
-### 4. API Endpoints
-- `GET /products`: List all products or filter via query params.
-- `POST /products`: Create a new product (requires JSON body).
-- `GET /products/<id>`: Retrieve specific product details.
-- `PUT /products/<id>`: Update an existing product.
-- `DELETE /products/<id>`: Remove a product from the database.
+### 2. Run All Tests
+To run the primary TDD suite:
+```bash
+python3 -m unittest discover 'Unit Tests'
+python3 -m unittest discover 'Rest-API-tests'
+```
+To run BDD scenarios:
+```bash
+behave
+```
+Specific test reports (Pass/Fail) are located in each respective test folder.

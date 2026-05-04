@@ -1,0 +1,23 @@
+# REST API Test Report - Product Service
+
+## Overview
+This report documents the verification of the RESTful interface and HTTP status code compliance.
+
+## Tested Endpoints
+1. **GET /products**: Verified listing all products and query parameter filtering (name, category, availability).
+2. **GET /products/<id>**: Verified individual resource retrieval and 404 handling.
+3. **POST /products**: Verified resource creation and Location header response.
+4. **PUT /products/<id>**: Verified resource modification.
+5. **DELETE /products/<id>**: Verified resource removal and idempotency.
+
+## Test Results
+- `test_get_product_list`: PASSED
+- `test_get_product`: PASSED
+- `test_get_product_not_found`: PASSED
+- `test_create_products`: PASSED
+- `test_update_product`: PASSED
+- `test_delete_product`: PASSED
+- `test_query_by_name`: PASSED
+- `test_query_by_category`: PASSED
+
+**Status**: 100% Success

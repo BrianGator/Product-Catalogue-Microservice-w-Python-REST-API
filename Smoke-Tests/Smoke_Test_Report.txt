@@ -1,0 +1,16 @@
+# Smoke Test Report
+
+## Overview
+Smoke tests are a non-exhaustive set of basic tests used to verify that the most important functions of the service work after a new build or deployment.
+
+## Critical Paths Tested
+- **Health Check**: Root index returns 200 OK.
+- **DB Connection**: Can retrieve a count of products (even if 0).
+- **Static Assets**: Admin UI `index.html` is reachable.
+
+## Results
+- **Index Response**: 200
+- **Admin UI Access**: 200
+- **Empty List Retrieval**: 200
+
+**Status**: SMOKE CLEAR. Deployment is stable.

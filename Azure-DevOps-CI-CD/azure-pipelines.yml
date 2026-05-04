@@ -1,0 +1,39 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  pythonVersion: '3.8'
+
+stages:
+- stage: Build
+  jobs:
+  - job: InstallDependencies
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: $(pythonVersion)
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r Requirements.txt
+      displayName: 'Install dependencies'
+
+- stage: Test
+  jobs:
+  - job: RunTests
+    steps:
+    - script: |
+        python -m unittest discover 'Unit Tests'
+        python -m unittest discover 'Rest-API-tests'
+      displayName: 'Run Unit and API Tests'
+
+- stage: BDD
+  jobs:
+  - job: RunBDD
+    steps:
+    - script: |
+        pip install behave selenium
+        behave
+      displayName: 'Run BDD Scenarios'

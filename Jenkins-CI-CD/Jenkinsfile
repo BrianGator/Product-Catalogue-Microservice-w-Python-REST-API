@@ -1,0 +1,52 @@
+pipeline {
+    agent any
+
+    environment {
+        PYTHON_VERSION = '3.8'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r Requirements.txt'
+            }
+        }
+
+        stage('Static Analysis') {
+            steps {
+                sh 'flake8 .'
+            }
+        }
+
+        stage('Unit & API Tests') {
+            steps {
+                sh 'python3 -m unittest discover "Unit Tests"'
+                sh 'python3 -m unittest discover "Rest-API-tests"'
+            }
+        }
+
+        stage('BDD Scenarios') {
+            steps {
+                sh 'behave'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to staging...'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed.'
+        }
+    }
+}

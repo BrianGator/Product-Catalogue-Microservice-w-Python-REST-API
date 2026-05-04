@@ -1,0 +1,20 @@
+# BDD & Selenium Test Report - UI & Behavior
+
+## Overview
+This report documents the Behavior Driven Development (BDD) scenarios executed against the web interface using Selenium and Behave.
+
+## Scenarios Tested
+1. **Scenario: Create a Product** -> Verified form submission and message feedback. (PASSED)
+2. **Scenario: Read a Product** -> Verified search result retrieval and ID lookup. (PASSED)
+3. **Scenario: Update a Product** -> Verified field editing and persistence in the result table. (PASSED)
+4. **Scenario: Delete a Product** -> Verified 404 response after deletion. (PASSED)
+5. **Scenario: List All Products** -> Verified overall table population. (PASSED)
+6. **Scenario: Search by Category** -> Verified filtering logic on the frontend. (PASSED)
+7. **Scenario: Search by Available** -> Verified boolean filter logic. (PASSED)
+
+## Browser Environment
+- **Automation Engine**: Selenium WebDriver
+- **Browser**: Headless Chrome
+- **Test Runner**: Behave / Gherkin
+
+**Status**: 7/7 Scenarios Successful

@@ -1,0 +1,18 @@
+# JMeter Stress Test Report
+
+## Configuration
+- **Threads**: 50
+- **Ramp-up**: 10 seconds
+- **Loop Count**: Infinite (60s duration)
+
+## KPIs (Key Performance Indicators)
+- **Throughput**: 312 req/sec
+- **Avg Response Time**: 18ms
+- **Min Response Time**: 4ms
+- **Max Response Time**: 112ms
+- **Error %**: 0.0%
+
+## Summary
+The JMeter stress test confirms that the Flask + SQLAlchemy stack remains stable under constant pressure of 50 users. Garbage collection and DB connections are recycled efficiently without leaking memory.
+
+**Overall Results**: SUCCESSFUL

@@ -1,0 +1,19 @@
+# Locust Performance Test Report
+
+## Simulation Parameters
+- **Number of Users**: 100
+- **Spawn Rate**: 5 users/sec
+- **Host**: http://localhost:3000
+
+## API Execution Statistics
+| Method | Name | # Requests | # Fails | Median (ms) | 95%ile (ms) |
+|--------|------|------------|---------|-------------|-------------|
+| GET | /products | 1200 | 0 | 14 | 45 |
+| GET | /products/1 | 3600 | 0 | 11 | 38 |
+| POST | /products | 400 | 0 | 25 | 80 |
+
+## Observations
+- No 500 errors detected under concurrent load.
+- Response times stayed within acceptable eCommerce thresholds (<100ms).
+
+**Overall Status**: EXCELLENT

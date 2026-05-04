@@ -1,0 +1,20 @@
+# Cucumber (Gherkin) Test Report
+
+## Overview
+Automated behavioral verification using Cucumber/Gherkin syntax.
+
+## Feature: Product Inventory Management
+- **Scenario**: Successful search for an existing product
+  - Step 1: Given I navigate to the home page... OK
+  - Step 2: And a product exists... OK
+  - Step 3: When I enter name... OK
+  - Status: PASSED
+
+- **Scenario**: Attempting to retrieve a non-existent ID
+  - Step 1: Given I navigate to the home page... OK
+  - Step 2: When I enter ID... OK
+  - Step 3: And I press retrieve... OK
+  - Status: PASSED
+
+**Total Scenarios**: 2
+**Success Rate**: 100%

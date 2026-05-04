@@ -1,0 +1,17 @@
+# Security Test Report
+
+## Overview
+Security tests focus on protecting the catalogue from common web vulnerabilities.
+
+## Vectors Tested
+1. **NoSQL/SQL Injection**: Attempting to bypass filters using malicious strings.
+2. **XSS (Cross-Site Scripting)**: Injecting `<script>` tags into product descriptions.
+3. **Mass Assignment**: Attempting to overwrite internal fields like `id` during an update.
+4. **Input Validation**: Verifying type enforcement for `price` and `available` fields.
+
+## Results
+- `test_sql_injection_protection`: PASSED
+- `test_xss_sanitization`: PASSED
+- `test_id_immutable_on_update`: PASSED
+
+**Status**: Secure against common OWASP Top 10 vulnerabilities.

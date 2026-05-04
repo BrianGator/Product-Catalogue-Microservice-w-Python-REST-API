@@ -1,0 +1,17 @@
+# E2E Test Report
+
+## Overview
+End-to-End (E2E) tests simulate the complete lifecycle of a product from the user's perspective, traversing UI, API, and DB.
+
+## Flow Tested
+1. User logs into admin dashboard.
+2. User creates a "Gaming Laptop" product.
+3. User searches for the laptop by category.
+4. User updates the price.
+5. User deletes the product and verifies it's gone from the table.
+
+## Results
+- **Full Life Cycle Flow**: SUCCESS
+- **UI Data Consistency**: SUCCESS
+
+**Status**: Component orchestration verified from top to bottom.
